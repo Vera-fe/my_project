@@ -1,0 +1,34 @@
+<div class="filter-container">
+  <form [formGroup]="filterForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Search by Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter name">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="department">
+        <mat-option value="">All Departments</mat-option>
+        <mat-option *ngFor="let dept of departments" [value]="dept">
+          {{dept}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="">All Statuses</mat-option>
+        <mat-option *ngFor="let status of statuses" [value]="status">
+          {{status}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-button color="warn" (click)="clearFilters()">
+      <mat-icon>clear</mat-icon>
+      Clear
+    </button>
+  </form>
+</div>
