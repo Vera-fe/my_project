@@ -1,5 +1,7 @@
 <div class="form-container">
     <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="employee-form-container">
+
+        <!-- Name form -->
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input matInput formControlName="name" required>
@@ -8,6 +10,7 @@
             }
         </mat-form-field>
 
+        <!-- Position form -->
         <mat-form-field appearance="fill">
             <mat-label>Position</mat-label>
             <input matInput formControlName="position" required>
@@ -16,6 +19,7 @@
             }
         </mat-form-field>
 
+        <!-- Department form -->
         <mat-form-field appearance="fill">
             <mat-label>Department</mat-label>
             <mat-select formControlName="department" required>
@@ -29,6 +33,7 @@
             }
         </mat-form-field>
 
+        <!-- E-mail form -->
         <mat-form-field appearance="fill">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" type="email" required>
@@ -40,6 +45,7 @@
             }
         </mat-form-field>
 
+        <!-- Phone form -->
         <mat-form-field appearance="fill">
             <mat-label>Phone</mat-label>
             <input matInput formControlName="phone" required>
@@ -48,6 +54,7 @@
             }
         </mat-form-field>
 
+        <!-- Status form -->
         <mat-form-field appearance="fill">
             <mat-label>Status</mat-label>
             <mat-select formControlName="status" required>
@@ -58,6 +65,7 @@
             </mat-select>
         </mat-form-field>
 
+        <!-- HireDate form -->
         <mat-form-field appearance="fill">
             <mat-label>Hire Date</mat-label>
             <input matInput [matDatepicker]="picker" formControlName="hireDate" required>
@@ -65,6 +73,7 @@
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
+        <!-- Button -->
         <div class="form-actions">
             <button mat-raised-button color="primary" type="submit">
                 {{employee ? 'Update' : 'Add'}} Employee

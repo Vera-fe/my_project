@@ -27,7 +27,6 @@ import {Router} from '@angular/router';
 })
 export class EmployeeFormComponent implements OnInit {
     @Input() employee: Employee | null = null;
-    @Output() formSubmit = new EventEmitter<Employee>();
 
     employeeForm!: FormGroup;
     departments = ['HR', 'Development', 'Marketing', 'Finance', 'Sales'];
