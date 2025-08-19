@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Employee} from '../../models/employee.model';
+import {Employee} from '../../interfaces/employee.interface';
 import {FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import {EmployeeService} from '../../services/employee.service';
 import {CommonModule} from '@angular/common';

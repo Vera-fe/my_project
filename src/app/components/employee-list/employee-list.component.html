@@ -5,7 +5,8 @@
         <button mat-raised-button color="primary" routerLink="/employees/new">Add Employee</button>
     </div>
 
-    <table mat-table [dataSource]="(employees$ | async) || []" class="mat-elevation-z8">
+    <table mat-table [dataSource]="(employees$ | async) || []">
+
         <!-- ID Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>ID</th>

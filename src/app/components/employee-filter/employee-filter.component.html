@@ -1,5 +1,5 @@
 <div class="filter-container">
-  <form [formGroup]="filterForm">
+  <form [formGroup]="filterForm" class="filter-grid-container">
     <mat-form-field appearance="fill">
       <mat-label>Search by Name</mat-label>
       <input matInput formControlName="name" placeholder="Enter name">
@@ -10,6 +10,7 @@
       <mat-label>Department</mat-label>
       <mat-select formControlName="department">
         <mat-option value="">All Departments</mat-option>
+            <!-- TODO ng-->
         <mat-option *ngFor="let dept of departments" [value]="dept">
           {{dept}}
         </mat-option>
@@ -20,6 +21,7 @@
       <mat-label>Status</mat-label>
       <mat-select formControlName="status">
         <mat-option value="">All Statuses</mat-option>
+            <!-- TODO ng-->
         <mat-option *ngFor="let status of statuses" [value]="status">
           {{status}}
         </mat-option>
