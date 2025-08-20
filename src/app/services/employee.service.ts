@@ -40,6 +40,10 @@ export class EmployeeService {
         return this.employeesSubject.asObservable();
     }
 
+    getEmployeeById(id: number): Employee | undefined {
+        return this.employees.find(employee => employee.id === id);
+    }
+
     addEmployee(employee: Employee): void {
         employee.id = this.generateId();
         this.employees.push(employee);

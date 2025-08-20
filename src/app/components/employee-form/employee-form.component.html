@@ -6,7 +6,7 @@
             <mat-label>Name</mat-label>
             <input matInput formControlName="name" required>
             @if (employeeForm.get('name')?.hasError('required')) {
-                <mat-error> Name is required </mat-error>
+            <mat-error> Name is required </mat-error>
             }
         </mat-form-field>
 
@@ -15,7 +15,7 @@
             <mat-label>Position</mat-label>
             <input matInput formControlName="position" required>
             @if (employeeForm.get('position')?.hasError('required')) {
-                <mat-error> Position is required </mat-error>
+            <mat-error> Position is required </mat-error>
             }
         </mat-form-field>
 
@@ -29,7 +29,7 @@
                 </mat-option>
             </mat-select>
             @if (employeeForm.get('department')?.hasError('required')) {
-                <mat-error> Department is required </mat-error>
+            <mat-error> Department is required </mat-error>
             }
         </mat-form-field>
 
@@ -38,10 +38,10 @@
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" type="email" required>
             @if (employeeForm.get('email')?.hasError('required')) {
-                <mat-error> Email is required  </mat-error>
+            <mat-error> Email is required </mat-error>
             }
             @if (employeeForm.get('email')?.hasError('email')) {
-                <mat-error> Please enter a valid email </mat-error>
+            <mat-error> Please enter a valid email </mat-error>
             }
         </mat-form-field>
 
@@ -50,7 +50,7 @@
             <mat-label>Phone</mat-label>
             <input matInput formControlName="phone" required>
             @if (employeeForm.get('phone')?.hasError('required')) {
-                <mat-error> Phone is required </mat-error>
+            <mat-error> Phone is required </mat-error>
             }
         </mat-form-field>
 
@@ -76,7 +76,7 @@
         <!-- Button -->
         <div class="form-actions">
             <button mat-raised-button color="primary" type="submit">
-                {{employee ? 'Update' : 'Add'}} Employee
+                {{isEditMode ? 'Update' : 'Add'}} Employee
             </button>
             <button mat-raised-button type="button" (click)="router.navigate(['/'])">
                 Cancel
